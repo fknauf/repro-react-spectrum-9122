@@ -1,0 +1,28 @@
+PointerOverCapture pointerover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+PointerOver pointerover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+PointerEnter pointerover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+MouseOverCapture mouseover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+MouseOver mouseover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+MouseEnter mouseover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+PointerMoveCapture pointermove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+PointerMove pointermove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+MouseMoveCapture mousemove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+MouseMove mousemove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+PointerDownCapture pointerdown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+PointerDown pointerdown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+MouseDownCapture mousedown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+MouseDown mousedown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+FocusCapture focusin { target: button, isTrusted: true, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, SCROLL_PAGE_DOWN: 32768, … } 1 page.tsx:8:13
+Focus focusin { target: button, isTrusted: true, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, SCROLL_PAGE_DOWN: 32768, … } 3 page.tsx:8:13
+PointerUpCapture pointerup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+PointerUp pointerup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+MouseUpCapture mouseup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+MouseUp mouseup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+ClickCapture click { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+Click click { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+PointerOutCapture pointerout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+PointerOut pointerout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+PointerLeave pointerout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+MouseOutCapture mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 1 page.tsx:8:13
+MouseOut mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3 page.tsx:8:13
+MouseLeave mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3

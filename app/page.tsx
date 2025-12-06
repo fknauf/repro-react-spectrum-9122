@@ -1,6 +1,5 @@
 "use client";
 
-import { ActionButton } from "@adobe/react-spectrum";
 import { SyntheticEvent } from "react";
 
 export default function Home() {
@@ -8,204 +7,25 @@ export default function Home() {
     console.log("plain-btn", handler, e.nativeEvent.type, e.eventPhase, e.target);
   };
 
-  interface SpectrumEvent {
-    type: string | undefined
-    target: unknown
-  }
-
-  const logSpectrumBtnEvent = (handler: string) => (e: SpectrumEvent | boolean) => {
-    console.log("spectrum-btn", handler, e instanceof Object ? e.target : e);
-  }
-
   return <>
     <button
       data-cy="plain-btn"
-      onBlur={logPlainBtnEvent("Blur")}
-      onClick={logPlainBtnEvent("Click")}
-      onFocus={logPlainBtnEvent("Focus")}
       onMouseEnter={logPlainBtnEvent("MouseEnter")}
-      onMouseOver={logPlainBtnEvent("MouseOver")}
-      onMouseDown={logPlainBtnEvent("MouseDown")}
-      onMouseUp={logPlainBtnEvent("MouseUp")}
       onMouseLeave={logPlainBtnEvent("MouseLeave")}
-      onMouseMove={logPlainBtnEvent("MouseMove")}
       onMouseOut={logPlainBtnEvent("MouseOut")}
-
-      onAbort={logPlainBtnEvent("Abort")}
-      onAbortCapture={logPlainBtnEvent("AbortCapture")}
-      onAnimationEnd={logPlainBtnEvent("AnimationEnd")}
-      onAnimationEndCapture={logPlainBtnEvent("AnimationEndCapture")}
-      onAnimationIteration={logPlainBtnEvent("AnimationIteration")}
-      onAnimationIterationCapture={logPlainBtnEvent("AnimationIterationCapture")}
-      onAnimationStart={logPlainBtnEvent("AnimationStart")}
-      onAnimationStartCapture={logPlainBtnEvent("AnimationStartCapture")}
-      onAuxClick={logPlainBtnEvent("AuxClick")}
-      onAuxClickCapture={logPlainBtnEvent("AuxClickCapture")}
-      onBeforeInput={logPlainBtnEvent("BeforeInput")}
-      onBeforeInputCapture={logPlainBtnEvent("BeforeInputCapture")}
-      onBeforeToggle={logPlainBtnEvent("BeforeToggle")}
-      onBlurCapture={logPlainBtnEvent("BlurCapture")}
-      onCanPlay={logPlainBtnEvent("CanPlay")}
-      onCanPlayCapture={logPlainBtnEvent("CanPlayCapture")}
-      onCanPlayThrough={logPlainBtnEvent("CanPlayThrough")}
-      onCanPlayThroughCapture={logPlainBtnEvent("CanPlayThroughCapture")}
-      onChange={logPlainBtnEvent("Change")}
-      onChangeCapture={logPlainBtnEvent("ChangeCapture")}
-      onClickCapture={logPlainBtnEvent("ClickCapture")}
-      onCompositionEnd={logPlainBtnEvent("CompositionEnd")}
-      onCompositionEndCapture={logPlainBtnEvent("CompositionEndCapture")}
-      onCompositionStart={logPlainBtnEvent("CompositionStart")}
-      onCompositionStartCapture={logPlainBtnEvent("CompositionStartCapture")}
-      onCompositionUpdate={logPlainBtnEvent("CompositionUpdate")}
-      onCompositionUpdateCapture={logPlainBtnEvent("CompositionUpdateCapture")}
-      onContextMenu={logPlainBtnEvent("ContextMenu")}
-      onContextMenuCapture={logPlainBtnEvent("ContextMenuCapture")}
-      onCopy={logPlainBtnEvent("Copy")}
-      onCopyCapture={logPlainBtnEvent("CopyCapture")}
-      onCut={logPlainBtnEvent("Cut")}
-      onCutCapture={logPlainBtnEvent("CutCapture")}
-      onDoubleClick={logPlainBtnEvent("DoubleClick")}
-      onDoubleClickCapture={logPlainBtnEvent("DoubleClickCapture")}
-      onDrag={logPlainBtnEvent("Drag")}
-      onDragCapture={logPlainBtnEvent("DragCapture")}
-      onDragEnd={logPlainBtnEvent("DragEnd")}
-      onDragEndCapture={logPlainBtnEvent("DragEndCapture")}
-      onDragEnter={logPlainBtnEvent("DragEnter")}
-      onDragEnterCapture={logPlainBtnEvent("DragEnterCapture")}
-      onDragExit={logPlainBtnEvent("DragExit")}
-      onDragExitCapture={logPlainBtnEvent("DragExitCapture")}
-      onDragLeave={logPlainBtnEvent("DragLeave")}
-      onDragLeaveCapture={logPlainBtnEvent("DragLeaveCapture")}
-      onDragOver={logPlainBtnEvent("DragOver")}
-      onDragOverCapture={logPlainBtnEvent("DragOverCapture")}
-      onDragStart={logPlainBtnEvent("DragStart")}
-      onDragStartCapture={logPlainBtnEvent("DragStartCapture")}
-      onDrop={logPlainBtnEvent("Drop")}
-      onDropCapture={logPlainBtnEvent("DropCapture")}
-      onDurationChange={logPlainBtnEvent("DurationChange")}
-      onDurationChangeCapture={logPlainBtnEvent("DurationChangeCapture")}
-      onEmptied={logPlainBtnEvent("Emptied")}
-      onEmptiedCapture={logPlainBtnEvent("EmptiedCapture")}
-      onEncrypted={logPlainBtnEvent("Encrypted")}
-      onEncryptedCapture={logPlainBtnEvent("EncryptedCapture")}
-      onEnded={logPlainBtnEvent("Ended")}
-      onEndedCapture={logPlainBtnEvent("EndedCapture")}
-      onError={logPlainBtnEvent("Error")}
-      onErrorCapture={logPlainBtnEvent("ErrorCapture")}
-      onFocusCapture={logPlainBtnEvent("FocusCapture")}
-      onGotPointerCapture={logPlainBtnEvent("GotPointerCapture")}
-      onGotPointerCaptureCapture={logPlainBtnEvent("GotPointerCaptureCapture")}
-      onInput={logPlainBtnEvent("Input")}
-      onInputCapture={logPlainBtnEvent("InputCapture")}
-      onInvalid={logPlainBtnEvent("Invalid")}
-      onInvalidCapture={logPlainBtnEvent("InvalidCapture")}
-      onKeyDown={logPlainBtnEvent("KeyDown")}
-      onKeyDownCapture={logPlainBtnEvent("KeyDownCapture")}
-      onKeyUp={logPlainBtnEvent("KeyUp")}
-      onKeyUpCapture={logPlainBtnEvent("KeyUpCapture")}
-      onLoad={logPlainBtnEvent("Load")}
-      onLoadCapture={logPlainBtnEvent("LoadCapture")}
-      onLoadStart={logPlainBtnEvent("LoadStart")}
-      onLoadStartCapture={logPlainBtnEvent("LoadStartCapture")}
-      onLoadedData={logPlainBtnEvent("LoadedData")}
-      onLoadedDataCapture={logPlainBtnEvent("LoadedDataCapture")}
-      onLoadedMetadata={logPlainBtnEvent("LoadedMetadata")}
-      onLoadedMetadataCapture={logPlainBtnEvent("LoadedMetadataCapture")}
-      onLostPointerCapture={logPlainBtnEvent("LostPointerCapture")}
-      onLostPointerCaptureCapture={logPlainBtnEvent("LostPointerCaptureCapture")}
-      onMouseDownCapture={logPlainBtnEvent("MouseDownCapture")}
-      onMouseMoveCapture={logPlainBtnEvent("MouseMoveCapture")}
       onMouseOutCapture={logPlainBtnEvent("MouseOutCapture")}
       onMouseOverCapture={logPlainBtnEvent("MouseOverCapture")}
-      onMouseUpCapture={logPlainBtnEvent("MouseUpCapture")}
-      onPaste={logPlainBtnEvent("Paste")}
-      onPasteCapture={logPlainBtnEvent("PasteCapture")}
-      onPause={logPlainBtnEvent("Pause")}
-      onPauseCapture={logPlainBtnEvent("PauseCapture")}
-      onPlay={logPlainBtnEvent("Play")}
-      onPlayCapture={logPlainBtnEvent("PlayCapture")}
-      onPlaying={logPlainBtnEvent("Playing")}
-      onPlayingCapture={logPlainBtnEvent("PlayingCapture")}
-      onPointerCancel={logPlainBtnEvent("PointerCancel")}
-      onPointerCancelCapture={logPlainBtnEvent("PointerCancelCapture")}
-      onPointerDown={logPlainBtnEvent("PointerDown")}
-      onPointerDownCapture={logPlainBtnEvent("PointerDownCapture")}
+      onMouseOver={logPlainBtnEvent("MouseOver")}
+
       onPointerEnter={logPlainBtnEvent("PointerEnter")}
       onPointerLeave={logPlainBtnEvent("PointerLeave")}
-      onPointerMove={logPlainBtnEvent("PointerMove")}
-      onPointerMoveCapture={logPlainBtnEvent("PointerMoveCapture")}
       onPointerOut={logPlainBtnEvent("PointerOut")}
       onPointerOutCapture={logPlainBtnEvent("PointerOutCapture")}
       onPointerOver={logPlainBtnEvent("PointerOver")}
       onPointerOverCapture={logPlainBtnEvent("PointerOverCapture")}
-      onPointerUp={logPlainBtnEvent("PointerUp")}
-      onPointerUpCapture={logPlainBtnEvent("PointerUpCapture")}
-      onProgress={logPlainBtnEvent("Progress")}
-      onProgressCapture={logPlainBtnEvent("ProgressCapture")}
-      onRateChange={logPlainBtnEvent("RateChange")}
-      onRateChangeCapture={logPlainBtnEvent("RateChangeCapture")}
-      onReset={logPlainBtnEvent("Reset")}
-      onResetCapture={logPlainBtnEvent("ResetCapture")}
-      onScroll={logPlainBtnEvent("Scroll")}
-      onScrollCapture={logPlainBtnEvent("ScrollCapture")}
-      onScrollEnd={logPlainBtnEvent("ScrollEnd")}
-      onScrollEndCapture={logPlainBtnEvent("ScrollEndCapture")}
-      onSeeked={logPlainBtnEvent("Seeked")}
-      onSeekedCapture={logPlainBtnEvent("SeekedCapture")}
-      onSeeking={logPlainBtnEvent("Seeking")}
-      onSeekingCapture={logPlainBtnEvent("SeekingCapture")}
-      onSelect={logPlainBtnEvent("Select")}
-      onSelectCapture={logPlainBtnEvent("SelectCapture")}
-      onStalled={logPlainBtnEvent("Stalled")}
-      onStalledCapture={logPlainBtnEvent("StalledCapture")}
-      onSubmit={logPlainBtnEvent("Submit")}
-      onSubmitCapture={logPlainBtnEvent("SubmitCapture")}
-      onSuspend={logPlainBtnEvent("Suspend")}
-      onSuspendCapture={logPlainBtnEvent("SuspendCapture")}
-      onTimeUpdate={logPlainBtnEvent("TimeUpdate")}
-      onTimeUpdateCapture={logPlainBtnEvent("TimeUpdateCapture")}
-      onToggle={logPlainBtnEvent("Toggle")}
-      onTouchCancel={logPlainBtnEvent("TouchCancel")}
-      onTouchCancelCapture={logPlainBtnEvent("TouchCancelCapture")}
-      onTouchEnd={logPlainBtnEvent("TouchEnd")}
-      onTouchEndCapture={logPlainBtnEvent("TouchEndCapture")}
-      onTouchMove={logPlainBtnEvent("TouchMove")}
-      onTouchMoveCapture={logPlainBtnEvent("TouchMoveCapture")}
-      onTouchStart={logPlainBtnEvent("TouchStart")}
-      onTouchStartCapture={logPlainBtnEvent("TouchStartCapture")}
-      onTransitionCancel={logPlainBtnEvent("TransitionCancel")}
-      onTransitionCancelCapture={logPlainBtnEvent("TransitionCancelCapture")}
-      onTransitionEnd={logPlainBtnEvent("TransitionEnd")}
-      onTransitionEndCapture={logPlainBtnEvent("TransitionEndCapture")}
-      onTransitionRun={logPlainBtnEvent("TransitionRun")}
-      onTransitionRunCapture={logPlainBtnEvent("TransitionRunCapture")}
-      onTransitionStart={logPlainBtnEvent("TransitionStart")}
-      onTransitionStartCapture={logPlainBtnEvent("TransitionStartCapture")}
-      onVolumeChange={logPlainBtnEvent("VolumeChange")}
-      onVolumeChangeCapture={logPlainBtnEvent("VolumeChangeCapture")}
-      onWaiting={logPlainBtnEvent("Waiting")}
-      onWaitingCapture={logPlainBtnEvent("WaitingCapture")}
-      onWheel={logPlainBtnEvent("Wheel")}
-      onWheelCapture={logPlainBtnEvent("WheelCapture")}
-      onKeyPress={logPlainBtnEvent("KeyPress")}
-      onKeyPressCapture={logPlainBtnEvent("KeyPressCapture")}
     >
       Plain
     </button>
-    <ActionButton
-      data-cy="spectrum-btn"
-      onBlur={logSpectrumBtnEvent("onBlur")}
-      onFocus={logSpectrumBtnEvent("onFocus")}
-      onFocusChange={logSpectrumBtnEvent("onFocusChange")}
-      onKeyDown={logSpectrumBtnEvent("onKeyDown")}
-      onKeyUp={logSpectrumBtnEvent("onKeyUp")}
-      onPress={logSpectrumBtnEvent("onPress")}
-      onPressChange={logSpectrumBtnEvent("onPressChange")}
-      onPressEnd={logSpectrumBtnEvent("onPressEnd")}
-      onPressStart={logSpectrumBtnEvent("onPressStart")}
-      onPressUp={logSpectrumBtnEvent("onPressUp")}
-    >
-      Spectrum
-    </ActionButton>
+    <div data-cy="clickable-area">&nbsp;</div>
   </>;
 }

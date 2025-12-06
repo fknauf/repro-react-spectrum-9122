@@ -10,7 +10,6 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
-    "@adobe/react-spectrum": "^3.45.0",
     "next": "16.0.7",
     "react": "19.2.1",
     "react-dom": "19.2.1"

@@ -5,19 +5,9 @@ describe('<Home />', () => {
   it('can click on the plain button', () => {
     cy.mount(<Home />)
 
-    cy.get('[data-cy="plain-btn"]').click(); // this works
-  });
+    cy.get('[data-cy="plain-btn"]').click();
 
-  it('can click on the spectrum button', () => {
-    cy.mount(<Home />)
-
-    cy.get('[data-cy="spectrum-btn"]').click(); // this errors in firefox
-  });
-
-  it('can clickon both buttons', () => {
-    cy.mount(<Home />)
-
-    cy.get('[data-cy="plain-btn"]').click(); // this works
-    cy.get('[data-cy="spectrum-btn"]').click(); // this errors in firefox
+    // just so we also get the leave events for the first button
+    cy.get('[data-cy="clickable-area"]').click();
   });
 })

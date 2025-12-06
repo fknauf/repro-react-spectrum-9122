@@ -1,0 +1,10 @@
+spectrum-btn onPressStart <button class="o7Xu8a_spectrum-ActionBu…-ring o7Xu8a_is-hovered" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> forward-logs-shared.ts:95:22
+spectrum-btn onPressChange true forward-logs-shared.ts:95:22
+spectrum-btn onFocus <button class="o7Xu8a_spectrum-ActionBu…ctive o7Xu8a_is-hovered" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> forward-logs-shared.ts:95:22
+spectrum-btn onFocusChange true forward-logs-shared.ts:95:22
+spectrum-btn onPressUp <button class="o7Xu8a_spectrum-ActionBu…ctive o7Xu8a_is-hovered" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> forward-logs-shared.ts:95:22
+spectrum-btn onPressEnd <button class="o7Xu8a_spectrum-ActionBu…ctive o7Xu8a_is-hovered" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> forward-logs-shared.ts:95:22
+spectrum-btn onPressChange false forward-logs-shared.ts:95:22
+spectrum-btn onPress <button class="o7Xu8a_spectrum-ActionBu…ctive o7Xu8a_is-hovered" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> forward-logs-shared.ts:95:22
+spectrum-btn onBlur <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn"> forward-logs-shared.ts:95:22
+spectrum-btn onFocusChange false forward-logs-shared.ts:95:22

@@ -1,31 +1,33 @@
-PointerOverCapture pointerover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-PointerOver pointerover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-PointerEnter pointerover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-MouseOverCapture mouseover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-MouseOver mouseover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-MouseEnter mouseover { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-PointerMoveCapture pointermove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-PointerMove pointermove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-MouseMoveCapture mousemove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-MouseMove mousemove { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-PointerDownCapture pointerdown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-PointerDown pointerdown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-MouseDownCapture mousedown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-MouseDown mousedown { target: button, buttons: 1, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-FocusCapture focusin { target: button, isTrusted: true, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, SCROLL_PAGE_DOWN: 32768, … } 1 page.tsx:8:13
-Focus focusin { target: button, isTrusted: true, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, SCROLL_PAGE_DOWN: 32768, … } 3 page.tsx:8:13
-PointerUpCapture pointerup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-PointerUp pointerup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-MouseUpCapture mouseup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-MouseUp mouseup { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-ClickCapture click { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-Click click { target: button, buttons: 0, clientX: 28, clientY: 20, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-PointerOutCapture pointerout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-PointerOut pointerout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-PointerLeave pointerout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-MouseOutCapture mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 1 page.tsx:8:13
-MouseOut mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3 page.tsx:8:13
-MouseLeave mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3
+plain-btn PointerOverCapture pointerover 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerOver pointerover 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerEnter pointerover 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseOverCapture mouseover 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseOver mouseover 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseEnter mouseover 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerMoveCapture pointermove 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerMove pointermove 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseMoveCapture mousemove 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseMove mousemove 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerDownCapture pointerdown 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerDown pointerdown 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseDownCapture mousedown 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseDown mousedown 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn FocusCapture focusin 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn Focus focusin 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerUpCapture pointerup 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerUp pointerup 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseUpCapture mouseup 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseUp mouseup 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn ClickCapture click 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn Click click 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerOutCapture pointerout 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerOut pointerout 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn PointerLeave pointerout 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseOutCapture mouseout 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseOut mouseout 3 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn MouseLeave mouseout 3 <button data-cy="plain-btn"> page.tsx:8:13
+spectrum-btn onPressStart <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onPressChange true page.tsx:17:13
 Uncaught DOMException: Element.releasePointerCapture: Invalid pointer id
     onPointerDown webpack-internal:///./node_modules/@react-aria/interactions/dist/usePress.mjs:320
     React 8
@@ -100,5 +102,13 @@ Uncaught DOMException: Element.releasePointerCapture: Invalid pointer id
     _settlePromiseFromHandler http://localhost:8080/__cypress/runner/cypress_runner.js:1501
     _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1546
 usePress.mjs:320:67
-BlurCapture focusout { target: button, isTrusted: true, relatedTarget: button.o7Xu8a_spectrum-ActionButton.o7Xu8a_spectrum-BaseButton.o7Xu8a_i18nFontFamily.o7Xu8a_spectrum-FocusRing.o7Xu8a_spectrum-FocusRing-ring, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, … } 1 page.tsx:8:13
-Blur focusout { target: button, isTrusted: true, relatedTarget: button.o7Xu8a_spectrum-ActionButton.o7Xu8a_spectrum-BaseButton.o7Xu8a_i18nFontFamily.o7Xu8a_spectrum-FocusRing.o7Xu8a_spectrum-FocusRing-ring, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, … } 3
+plain-btn BlurCapture focusout 1 <button data-cy="plain-btn"> page.tsx:8:13
+plain-btn Blur focusout 3 <button data-cy="plain-btn"> page.tsx:8:13
+spectrum-btn onFocus <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onFocusChange true page.tsx:17:13
+spectrum-btn onPressUp <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onPressEnd <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onPressChange false page.tsx:17:13
+spectrum-btn onPress <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onBlur <button class="o7Xu8a_spectrum-ActionBu…-ring o7Xu8a_is-hovered" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn"> page.tsx:17:13
+spectrum-btn onFocusChange false page.tsx:17:13

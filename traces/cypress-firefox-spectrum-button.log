@@ -1,0 +1,12 @@
+spectrum-btn onPressStart <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onPressChange true page.tsx:17:13
+Uncaught DOMException: Element.releasePointerCapture: Invalid pointer id
+    onPointerDown webpack-internal:///./node_modules/@react-aria/interactions/dist/usePress.mjs:320
+    React 7
+usePress.mjs:320:67
+spectrum-btn onFocus <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onFocusChange true page.tsx:17:13
+spectrum-btn onPressUp  <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onPressEnd  <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13
+spectrum-btn onPressChange false page.tsx:17:13
+spectrum-btn onPress  <button class="o7Xu8a_spectrum-ActionBu…spectrum-FocusRing-ring" type="button" tabindex="0" data-react-aria-pressable="true" data-cy="spectrum-btn" style="user-select: none;"> page.tsx:17:13

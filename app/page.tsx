@@ -4,186 +4,207 @@ import { ActionButton } from "@adobe/react-spectrum";
 import { SyntheticEvent } from "react";
 
 export default function Home() {
-  const logEvent = (handler: string, e: SyntheticEvent<HTMLButtonElement>) => {
-    console.log(handler, e.nativeEvent, e.eventPhase);
+  const logPlainBtnEvent = (handler: string) => (e: SyntheticEvent<HTMLButtonElement>) => {
+    console.log("plain-btn", handler, e.nativeEvent.type, e.eventPhase, e.target);
   };
+
+  interface SpectrumEvent {
+    type: string | undefined
+    target: unknown
+  }
+
+  const logSpectrumBtnEvent = (handler: string) => (e: SpectrumEvent | boolean) => {
+    console.log("spectrum-btn", handler, e instanceof Object ? e.target : e);
+  }
 
   return <>
     <button
       data-cy="plain-btn"
-      onBlur={e => logEvent("Blur", e)}
-      onClick={e => logEvent("Click", e)}
-      onFocus={e => logEvent("Focus", e)}
-      onMouseEnter={e => logEvent("MouseEnter", e)}
-      onMouseOver={e => logEvent("MouseOver", e)}
-      onMouseDown={e => logEvent("MouseDown", e)}
-      onMouseUp={e => logEvent("MouseUp", e)}
-      onMouseLeave={e => logEvent("MouseLeave", e)}
-      onMouseMove={e => logEvent("MouseMove", e)}
-      onMouseOut={e => logEvent("MouseOut", e)}
+      onBlur={logPlainBtnEvent("Blur")}
+      onClick={logPlainBtnEvent("Click")}
+      onFocus={logPlainBtnEvent("Focus")}
+      onMouseEnter={logPlainBtnEvent("MouseEnter")}
+      onMouseOver={logPlainBtnEvent("MouseOver")}
+      onMouseDown={logPlainBtnEvent("MouseDown")}
+      onMouseUp={logPlainBtnEvent("MouseUp")}
+      onMouseLeave={logPlainBtnEvent("MouseLeave")}
+      onMouseMove={logPlainBtnEvent("MouseMove")}
+      onMouseOut={logPlainBtnEvent("MouseOut")}
 
-      onAbort={e => logEvent("Abort", e)}
-      onAbortCapture={e => logEvent("AbortCapture", e)}
-      onAnimationEnd={e => logEvent("AnimationEnd", e)}
-      onAnimationEndCapture={e => logEvent("AnimationEndCapture", e)}
-      onAnimationIteration={e => logEvent("AnimationIteration", e)}
-      onAnimationIterationCapture={e => logEvent("AnimationIterationCapture", e)}
-      onAnimationStart={e => logEvent("AnimationStart", e)}
-      onAnimationStartCapture={e => logEvent("AnimationStartCapture", e)}
-      onAuxClick={e => logEvent("AuxClick", e)}
-      onAuxClickCapture={e => logEvent("AuxClickCapture", e)}
-      onBeforeInput={e => logEvent("BeforeInput", e)}
-      onBeforeInputCapture={e => logEvent("BeforeInputCapture", e)}
-      onBeforeToggle={e => logEvent("BeforeToggle", e)}
-      onBlurCapture={e => logEvent("BlurCapture", e)}
-      onCanPlay={e => logEvent("CanPlay", e)}
-      onCanPlayCapture={e => logEvent("CanPlayCapture", e)}
-      onCanPlayThrough={e => logEvent("CanPlayThrough", e)}
-      onCanPlayThroughCapture={e => logEvent("CanPlayThroughCapture", e)}
-      onChange={e => logEvent("Change", e)}
-      onChangeCapture={e => logEvent("ChangeCapture", e)}
-      onClickCapture={e => logEvent("ClickCapture", e)}
-      onCompositionEnd={e => logEvent("CompositionEnd", e)}
-      onCompositionEndCapture={e => logEvent("CompositionEndCapture", e)}
-      onCompositionStart={e => logEvent("CompositionStart", e)}
-      onCompositionStartCapture={e => logEvent("CompositionStartCapture", e)}
-      onCompositionUpdate={e => logEvent("CompositionUpdate", e)}
-      onCompositionUpdateCapture={e => logEvent("CompositionUpdateCapture", e)}
-      onContextMenu={e => logEvent("ContextMenu", e)}
-      onContextMenuCapture={e => logEvent("ContextMenuCapture", e)}
-      onCopy={e => logEvent("Copy", e)}
-      onCopyCapture={e => logEvent("CopyCapture", e)}
-      onCut={e => logEvent("Cut", e)}
-      onCutCapture={e => logEvent("CutCapture", e)}
-      onDoubleClick={e => logEvent("DoubleClick", e)}
-      onDoubleClickCapture={e => logEvent("DoubleClickCapture", e)}
-      onDrag={e => logEvent("Drag", e)}
-      onDragCapture={e => logEvent("DragCapture", e)}
-      onDragEnd={e => logEvent("DragEnd", e)}
-      onDragEndCapture={e => logEvent("DragEndCapture", e)}
-      onDragEnter={e => logEvent("DragEnter", e)}
-      onDragEnterCapture={e => logEvent("DragEnterCapture", e)}
-      onDragExit={e => logEvent("DragExit", e)}
-      onDragExitCapture={e => logEvent("DragExitCapture", e)}
-      onDragLeave={e => logEvent("DragLeave", e)}
-      onDragLeaveCapture={e => logEvent("DragLeaveCapture", e)}
-      onDragOver={e => logEvent("DragOver", e)}
-      onDragOverCapture={e => logEvent("DragOverCapture", e)}
-      onDragStart={e => logEvent("DragStart", e)}
-      onDragStartCapture={e => logEvent("DragStartCapture", e)}
-      onDrop={e => logEvent("Drop", e)}
-      onDropCapture={e => logEvent("DropCapture", e)}
-      onDurationChange={e => logEvent("DurationChange", e)}
-      onDurationChangeCapture={e => logEvent("DurationChangeCapture", e)}
-      onEmptied={e => logEvent("Emptied", e)}
-      onEmptiedCapture={e => logEvent("EmptiedCapture", e)}
-      onEncrypted={e => logEvent("Encrypted", e)}
-      onEncryptedCapture={e => logEvent("EncryptedCapture", e)}
-      onEnded={e => logEvent("Ended", e)}
-      onEndedCapture={e => logEvent("EndedCapture", e)}
-      onError={e => logEvent("Error", e)}
-      onErrorCapture={e => logEvent("ErrorCapture", e)}
-      onFocusCapture={e => logEvent("FocusCapture", e)}
-      onGotPointerCapture={e => logEvent("GotPointerCapture", e)}
-      onGotPointerCaptureCapture={e => logEvent("GotPointerCaptureCapture", e)}
-      onInput={e => logEvent("Input", e)}
-      onInputCapture={e => logEvent("InputCapture", e)}
-      onInvalid={e => logEvent("Invalid", e)}
-      onInvalidCapture={e => logEvent("InvalidCapture", e)}
-      onKeyDown={e => logEvent("KeyDown", e)}
-      onKeyDownCapture={e => logEvent("KeyDownCapture", e)}
-      onKeyUp={e => logEvent("KeyUp", e)}
-      onKeyUpCapture={e => logEvent("KeyUpCapture", e)}
-      onLoad={e => logEvent("Load", e)}
-      onLoadCapture={e => logEvent("LoadCapture", e)}
-      onLoadStart={e => logEvent("LoadStart", e)}
-      onLoadStartCapture={e => logEvent("LoadStartCapture", e)}
-      onLoadedData={e => logEvent("LoadedData", e)}
-      onLoadedDataCapture={e => logEvent("LoadedDataCapture", e)}
-      onLoadedMetadata={e => logEvent("LoadedMetadata", e)}
-      onLoadedMetadataCapture={e => logEvent("LoadedMetadataCapture", e)}
-      onLostPointerCapture={e => logEvent("LostPointerCapture", e)}
-      onLostPointerCaptureCapture={e => logEvent("LostPointerCaptureCapture", e)}
-      onMouseDownCapture={e => logEvent("MouseDownCapture", e)}
-      onMouseMoveCapture={e => logEvent("MouseMoveCapture", e)}
-      onMouseOutCapture={e => logEvent("MouseOutCapture", e)}
-      onMouseOverCapture={e => logEvent("MouseOverCapture", e)}
-      onMouseUpCapture={e => logEvent("MouseUpCapture", e)}
-      onPaste={e => logEvent("Paste", e)}
-      onPasteCapture={e => logEvent("PasteCapture", e)}
-      onPause={e => logEvent("Pause", e)}
-      onPauseCapture={e => logEvent("PauseCapture", e)}
-      onPlay={e => logEvent("Play", e)}
-      onPlayCapture={e => logEvent("PlayCapture", e)}
-      onPlaying={e => logEvent("Playing", e)}
-      onPlayingCapture={e => logEvent("PlayingCapture", e)}
-      onPointerCancel={e => logEvent("PointerCancel", e)}
-      onPointerCancelCapture={e => logEvent("PointerCancelCapture", e)}
-      onPointerDown={e => logEvent("PointerDown", e)}
-      onPointerDownCapture={e => logEvent("PointerDownCapture", e)}
-      onPointerEnter={e => logEvent("PointerEnter", e)}
-      onPointerLeave={e => logEvent("PointerLeave", e)}
-      onPointerMove={e => logEvent("PointerMove", e)}
-      onPointerMoveCapture={e => logEvent("PointerMoveCapture", e)}
-      onPointerOut={e => logEvent("PointerOut", e)}
-      onPointerOutCapture={e => logEvent("PointerOutCapture", e)}
-      onPointerOver={e => logEvent("PointerOver", e)}
-      onPointerOverCapture={e => logEvent("PointerOverCapture", e)}
-      onPointerUp={e => logEvent("PointerUp", e)}
-      onPointerUpCapture={e => logEvent("PointerUpCapture", e)}
-      onProgress={e => logEvent("Progress", e)}
-      onProgressCapture={e => logEvent("ProgressCapture", e)}
-      onRateChange={e => logEvent("RateChange", e)}
-      onRateChangeCapture={e => logEvent("RateChangeCapture", e)}
-      onReset={e => logEvent("Reset", e)}
-      onResetCapture={e => logEvent("ResetCapture", e)}
-      onScroll={e => logEvent("Scroll", e)}
-      onScrollCapture={e => logEvent("ScrollCapture", e)}
-      onScrollEnd={e => logEvent("ScrollEnd", e)}
-      onScrollEndCapture={e => logEvent("ScrollEndCapture", e)}
-      onSeeked={e => logEvent("Seeked", e)}
-      onSeekedCapture={e => logEvent("SeekedCapture", e)}
-      onSeeking={e => logEvent("Seeking", e)}
-      onSeekingCapture={e => logEvent("SeekingCapture", e)}
-      onSelect={e => logEvent("Select", e)}
-      onSelectCapture={e => logEvent("SelectCapture", e)}
-      onStalled={e => logEvent("Stalled", e)}
-      onStalledCapture={e => logEvent("StalledCapture", e)}
-      onSubmit={e => logEvent("Submit", e)}
-      onSubmitCapture={e => logEvent("SubmitCapture", e)}
-      onSuspend={e => logEvent("Suspend", e)}
-      onSuspendCapture={e => logEvent("SuspendCapture", e)}
-      onTimeUpdate={e => logEvent("TimeUpdate", e)}
-      onTimeUpdateCapture={e => logEvent("TimeUpdateCapture", e)}
-      onToggle={e => logEvent("Toggle", e)}
-      onTouchCancel={e => logEvent("TouchCancel", e)}
-      onTouchCancelCapture={e => logEvent("TouchCancelCapture", e)}
-      onTouchEnd={e => logEvent("TouchEnd", e)}
-      onTouchEndCapture={e => logEvent("TouchEndCapture", e)}
-      onTouchMove={e => logEvent("TouchMove", e)}
-      onTouchMoveCapture={e => logEvent("TouchMoveCapture", e)}
-      onTouchStart={e => logEvent("TouchStart", e)}
-      onTouchStartCapture={e => logEvent("TouchStartCapture", e)}
-      onTransitionCancel={e => logEvent("TransitionCancel", e)}
-      onTransitionCancelCapture={e => logEvent("TransitionCancelCapture", e)}
-      onTransitionEnd={e => logEvent("TransitionEnd", e)}
-      onTransitionEndCapture={e => logEvent("TransitionEndCapture", e)}
-      onTransitionRun={e => logEvent("TransitionRun", e)}
-      onTransitionRunCapture={e => logEvent("TransitionRunCapture", e)}
-      onTransitionStart={e => logEvent("TransitionStart", e)}
-      onTransitionStartCapture={e => logEvent("TransitionStartCapture", e)}
-      onVolumeChange={e => logEvent("VolumeChange", e)}
-      onVolumeChangeCapture={e => logEvent("VolumeChangeCapture", e)}
-      onWaiting={e => logEvent("Waiting", e)}
-      onWaitingCapture={e => logEvent("WaitingCapture", e)}
-      onWheel={e => logEvent("Wheel", e)}
-      onWheelCapture={e => logEvent("WheelCapture", e)}
-      onKeyPress={e => logEvent("KeyPress", e)}
-      onKeyPressCapture={e => logEvent("KeyPressCapture", e)}
+      onAbort={logPlainBtnEvent("Abort")}
+      onAbortCapture={logPlainBtnEvent("AbortCapture")}
+      onAnimationEnd={logPlainBtnEvent("AnimationEnd")}
+      onAnimationEndCapture={logPlainBtnEvent("AnimationEndCapture")}
+      onAnimationIteration={logPlainBtnEvent("AnimationIteration")}
+      onAnimationIterationCapture={logPlainBtnEvent("AnimationIterationCapture")}
+      onAnimationStart={logPlainBtnEvent("AnimationStart")}
+      onAnimationStartCapture={logPlainBtnEvent("AnimationStartCapture")}
+      onAuxClick={logPlainBtnEvent("AuxClick")}
+      onAuxClickCapture={logPlainBtnEvent("AuxClickCapture")}
+      onBeforeInput={logPlainBtnEvent("BeforeInput")}
+      onBeforeInputCapture={logPlainBtnEvent("BeforeInputCapture")}
+      onBeforeToggle={logPlainBtnEvent("BeforeToggle")}
+      onBlurCapture={logPlainBtnEvent("BlurCapture")}
+      onCanPlay={logPlainBtnEvent("CanPlay")}
+      onCanPlayCapture={logPlainBtnEvent("CanPlayCapture")}
+      onCanPlayThrough={logPlainBtnEvent("CanPlayThrough")}
+      onCanPlayThroughCapture={logPlainBtnEvent("CanPlayThroughCapture")}
+      onChange={logPlainBtnEvent("Change")}
+      onChangeCapture={logPlainBtnEvent("ChangeCapture")}
+      onClickCapture={logPlainBtnEvent("ClickCapture")}
+      onCompositionEnd={logPlainBtnEvent("CompositionEnd")}
+      onCompositionEndCapture={logPlainBtnEvent("CompositionEndCapture")}
+      onCompositionStart={logPlainBtnEvent("CompositionStart")}
+      onCompositionStartCapture={logPlainBtnEvent("CompositionStartCapture")}
+      onCompositionUpdate={logPlainBtnEvent("CompositionUpdate")}
+      onCompositionUpdateCapture={logPlainBtnEvent("CompositionUpdateCapture")}
+      onContextMenu={logPlainBtnEvent("ContextMenu")}
+      onContextMenuCapture={logPlainBtnEvent("ContextMenuCapture")}
+      onCopy={logPlainBtnEvent("Copy")}
+      onCopyCapture={logPlainBtnEvent("CopyCapture")}
+      onCut={logPlainBtnEvent("Cut")}
+      onCutCapture={logPlainBtnEvent("CutCapture")}
+      onDoubleClick={logPlainBtnEvent("DoubleClick")}
+      onDoubleClickCapture={logPlainBtnEvent("DoubleClickCapture")}
+      onDrag={logPlainBtnEvent("Drag")}
+      onDragCapture={logPlainBtnEvent("DragCapture")}
+      onDragEnd={logPlainBtnEvent("DragEnd")}
+      onDragEndCapture={logPlainBtnEvent("DragEndCapture")}
+      onDragEnter={logPlainBtnEvent("DragEnter")}
+      onDragEnterCapture={logPlainBtnEvent("DragEnterCapture")}
+      onDragExit={logPlainBtnEvent("DragExit")}
+      onDragExitCapture={logPlainBtnEvent("DragExitCapture")}
+      onDragLeave={logPlainBtnEvent("DragLeave")}
+      onDragLeaveCapture={logPlainBtnEvent("DragLeaveCapture")}
+      onDragOver={logPlainBtnEvent("DragOver")}
+      onDragOverCapture={logPlainBtnEvent("DragOverCapture")}
+      onDragStart={logPlainBtnEvent("DragStart")}
+      onDragStartCapture={logPlainBtnEvent("DragStartCapture")}
+      onDrop={logPlainBtnEvent("Drop")}
+      onDropCapture={logPlainBtnEvent("DropCapture")}
+      onDurationChange={logPlainBtnEvent("DurationChange")}
+      onDurationChangeCapture={logPlainBtnEvent("DurationChangeCapture")}
+      onEmptied={logPlainBtnEvent("Emptied")}
+      onEmptiedCapture={logPlainBtnEvent("EmptiedCapture")}
+      onEncrypted={logPlainBtnEvent("Encrypted")}
+      onEncryptedCapture={logPlainBtnEvent("EncryptedCapture")}
+      onEnded={logPlainBtnEvent("Ended")}
+      onEndedCapture={logPlainBtnEvent("EndedCapture")}
+      onError={logPlainBtnEvent("Error")}
+      onErrorCapture={logPlainBtnEvent("ErrorCapture")}
+      onFocusCapture={logPlainBtnEvent("FocusCapture")}
+      onGotPointerCapture={logPlainBtnEvent("GotPointerCapture")}
+      onGotPointerCaptureCapture={logPlainBtnEvent("GotPointerCaptureCapture")}
+      onInput={logPlainBtnEvent("Input")}
+      onInputCapture={logPlainBtnEvent("InputCapture")}
+      onInvalid={logPlainBtnEvent("Invalid")}
+      onInvalidCapture={logPlainBtnEvent("InvalidCapture")}
+      onKeyDown={logPlainBtnEvent("KeyDown")}
+      onKeyDownCapture={logPlainBtnEvent("KeyDownCapture")}
+      onKeyUp={logPlainBtnEvent("KeyUp")}
+      onKeyUpCapture={logPlainBtnEvent("KeyUpCapture")}
+      onLoad={logPlainBtnEvent("Load")}
+      onLoadCapture={logPlainBtnEvent("LoadCapture")}
+      onLoadStart={logPlainBtnEvent("LoadStart")}
+      onLoadStartCapture={logPlainBtnEvent("LoadStartCapture")}
+      onLoadedData={logPlainBtnEvent("LoadedData")}
+      onLoadedDataCapture={logPlainBtnEvent("LoadedDataCapture")}
+      onLoadedMetadata={logPlainBtnEvent("LoadedMetadata")}
+      onLoadedMetadataCapture={logPlainBtnEvent("LoadedMetadataCapture")}
+      onLostPointerCapture={logPlainBtnEvent("LostPointerCapture")}
+      onLostPointerCaptureCapture={logPlainBtnEvent("LostPointerCaptureCapture")}
+      onMouseDownCapture={logPlainBtnEvent("MouseDownCapture")}
+      onMouseMoveCapture={logPlainBtnEvent("MouseMoveCapture")}
+      onMouseOutCapture={logPlainBtnEvent("MouseOutCapture")}
+      onMouseOverCapture={logPlainBtnEvent("MouseOverCapture")}
+      onMouseUpCapture={logPlainBtnEvent("MouseUpCapture")}
+      onPaste={logPlainBtnEvent("Paste")}
+      onPasteCapture={logPlainBtnEvent("PasteCapture")}
+      onPause={logPlainBtnEvent("Pause")}
+      onPauseCapture={logPlainBtnEvent("PauseCapture")}
+      onPlay={logPlainBtnEvent("Play")}
+      onPlayCapture={logPlainBtnEvent("PlayCapture")}
+      onPlaying={logPlainBtnEvent("Playing")}
+      onPlayingCapture={logPlainBtnEvent("PlayingCapture")}
+      onPointerCancel={logPlainBtnEvent("PointerCancel")}
+      onPointerCancelCapture={logPlainBtnEvent("PointerCancelCapture")}
+      onPointerDown={logPlainBtnEvent("PointerDown")}
+      onPointerDownCapture={logPlainBtnEvent("PointerDownCapture")}
+      onPointerEnter={logPlainBtnEvent("PointerEnter")}
+      onPointerLeave={logPlainBtnEvent("PointerLeave")}
+      onPointerMove={logPlainBtnEvent("PointerMove")}
+      onPointerMoveCapture={logPlainBtnEvent("PointerMoveCapture")}
+      onPointerOut={logPlainBtnEvent("PointerOut")}
+      onPointerOutCapture={logPlainBtnEvent("PointerOutCapture")}
+      onPointerOver={logPlainBtnEvent("PointerOver")}
+      onPointerOverCapture={logPlainBtnEvent("PointerOverCapture")}
+      onPointerUp={logPlainBtnEvent("PointerUp")}
+      onPointerUpCapture={logPlainBtnEvent("PointerUpCapture")}
+      onProgress={logPlainBtnEvent("Progress")}
+      onProgressCapture={logPlainBtnEvent("ProgressCapture")}
+      onRateChange={logPlainBtnEvent("RateChange")}
+      onRateChangeCapture={logPlainBtnEvent("RateChangeCapture")}
+      onReset={logPlainBtnEvent("Reset")}
+      onResetCapture={logPlainBtnEvent("ResetCapture")}
+      onScroll={logPlainBtnEvent("Scroll")}
+      onScrollCapture={logPlainBtnEvent("ScrollCapture")}
+      onScrollEnd={logPlainBtnEvent("ScrollEnd")}
+      onScrollEndCapture={logPlainBtnEvent("ScrollEndCapture")}
+      onSeeked={logPlainBtnEvent("Seeked")}
+      onSeekedCapture={logPlainBtnEvent("SeekedCapture")}
+      onSeeking={logPlainBtnEvent("Seeking")}
+      onSeekingCapture={logPlainBtnEvent("SeekingCapture")}
+      onSelect={logPlainBtnEvent("Select")}
+      onSelectCapture={logPlainBtnEvent("SelectCapture")}
+      onStalled={logPlainBtnEvent("Stalled")}
+      onStalledCapture={logPlainBtnEvent("StalledCapture")}
+      onSubmit={logPlainBtnEvent("Submit")}
+      onSubmitCapture={logPlainBtnEvent("SubmitCapture")}
+      onSuspend={logPlainBtnEvent("Suspend")}
+      onSuspendCapture={logPlainBtnEvent("SuspendCapture")}
+      onTimeUpdate={logPlainBtnEvent("TimeUpdate")}
+      onTimeUpdateCapture={logPlainBtnEvent("TimeUpdateCapture")}
+      onToggle={logPlainBtnEvent("Toggle")}
+      onTouchCancel={logPlainBtnEvent("TouchCancel")}
+      onTouchCancelCapture={logPlainBtnEvent("TouchCancelCapture")}
+      onTouchEnd={logPlainBtnEvent("TouchEnd")}
+      onTouchEndCapture={logPlainBtnEvent("TouchEndCapture")}
+      onTouchMove={logPlainBtnEvent("TouchMove")}
+      onTouchMoveCapture={logPlainBtnEvent("TouchMoveCapture")}
+      onTouchStart={logPlainBtnEvent("TouchStart")}
+      onTouchStartCapture={logPlainBtnEvent("TouchStartCapture")}
+      onTransitionCancel={logPlainBtnEvent("TransitionCancel")}
+      onTransitionCancelCapture={logPlainBtnEvent("TransitionCancelCapture")}
+      onTransitionEnd={logPlainBtnEvent("TransitionEnd")}
+      onTransitionEndCapture={logPlainBtnEvent("TransitionEndCapture")}
+      onTransitionRun={logPlainBtnEvent("TransitionRun")}
+      onTransitionRunCapture={logPlainBtnEvent("TransitionRunCapture")}
+      onTransitionStart={logPlainBtnEvent("TransitionStart")}
+      onTransitionStartCapture={logPlainBtnEvent("TransitionStartCapture")}
+      onVolumeChange={logPlainBtnEvent("VolumeChange")}
+      onVolumeChangeCapture={logPlainBtnEvent("VolumeChangeCapture")}
+      onWaiting={logPlainBtnEvent("Waiting")}
+      onWaitingCapture={logPlainBtnEvent("WaitingCapture")}
+      onWheel={logPlainBtnEvent("Wheel")}
+      onWheelCapture={logPlainBtnEvent("WheelCapture")}
+      onKeyPress={logPlainBtnEvent("KeyPress")}
+      onKeyPressCapture={logPlainBtnEvent("KeyPressCapture")}
     >
       Plain
     </button>
-    <ActionButton data-cy="spectrum-btn">
+    <ActionButton
+      data-cy="spectrum-btn"
+      onBlur={logSpectrumBtnEvent("onBlur")}
+      onFocus={logSpectrumBtnEvent("onFocus")}
+      onFocusChange={logSpectrumBtnEvent("onFocusChange")}
+      onKeyDown={logSpectrumBtnEvent("onKeyDown")}
+      onKeyUp={logSpectrumBtnEvent("onKeyUp")}
+      onPress={logSpectrumBtnEvent("onPress")}
+      onPressChange={logSpectrumBtnEvent("onPressChange")}
+      onPressEnd={logSpectrumBtnEvent("onPressEnd")}
+      onPressStart={logSpectrumBtnEvent("onPressStart")}
+      onPressUp={logSpectrumBtnEvent("onPressUp")}
+    >
       Spectrum
     </ActionButton>
   </>;

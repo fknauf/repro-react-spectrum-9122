@@ -6,16 +6,175 @@ export default function Home() {
   return <>
     <button
       data-cy="plain-btn"
-      onBlur={console.log}
-      onClick={console.log}
-      onFocus={console.log}
-      onMouseEnter={console.log}
-      onMouseOver={console.log}
-      onMouseDown={console.log}
-      onMouseUp={console.log}
-      onMouseLeave={console.log}
-      onMouseMove={console.log}
-      onMouseOut={console.log}
+      onBlur={e => console.log("Blur", e)}
+      onClick={e => console.log("Click", e)}
+      onFocus={e => console.log("Focus", e)}
+      onMouseEnter={e => console.log("MouseEnter", e)}
+      onMouseOver={e => console.log("MouseOver", e)}
+      onMouseDown={e => console.log("MouseDown", e)}
+      onMouseUp={e => console.log("MouseUp", e)}
+      onMouseLeave={e => console.log("MouseLeave", e)}
+      onMouseMove={e => console.log("MouseMove", e)}
+      onMouseOut={e => console.log("MouseOut", e)}
+
+      onAbort={e => console.log("Abort", e)}
+      onAbortCapture={e => console.log("AbortCapture", e)}
+      onAnimationEnd={e => console.log("AnimationEnd", e)}
+      onAnimationEndCapture={e => console.log("AnimationEndCapture", e)}
+      onAnimationIteration={e => console.log("AnimationIteration", e)}
+      onAnimationIterationCapture={e => console.log("AnimationIterationCapture", e)}
+      onAnimationStart={e => console.log("AnimationStart", e)}
+      onAnimationStartCapture={e => console.log("AnimationStartCapture", e)}
+      onAuxClick={e => console.log("AuxClick", e)}
+      onAuxClickCapture={e => console.log("AuxClickCapture", e)}
+      onBeforeInput={e => console.log("BeforeInput", e)}
+      onBeforeInputCapture={e => console.log("BeforeInputCapture", e)}
+      onBeforeToggle={e => console.log("BeforeToggle", e)}
+      onBlurCapture={e => console.log("BlurCapture", e)}
+      onCanPlay={e => console.log("CanPlay", e)}
+      onCanPlayCapture={e => console.log("CanPlayCapture", e)}
+      onCanPlayThrough={e => console.log("CanPlayThrough", e)}
+      onCanPlayThroughCapture={e => console.log("CanPlayThroughCapture", e)}
+      onChange={e => console.log("Change", e)}
+      onChangeCapture={e => console.log("ChangeCapture", e)}
+      onClickCapture={e => console.log("ClickCapture", e)}
+      onCompositionEnd={e => console.log("CompositionEnd", e)}
+      onCompositionEndCapture={e => console.log("CompositionEndCapture", e)}
+      onCompositionStart={e => console.log("CompositionStart", e)}
+      onCompositionStartCapture={e => console.log("CompositionStartCapture", e)}
+      onCompositionUpdate={e => console.log("CompositionUpdate", e)}
+      onCompositionUpdateCapture={e => console.log("CompositionUpdateCapture", e)}
+      onContextMenu={e => console.log("ContextMenu", e)}
+      onContextMenuCapture={e => console.log("ContextMenuCapture", e)}
+      onCopy={e => console.log("Copy", e)}
+      onCopyCapture={e => console.log("CopyCapture", e)}
+      onCut={e => console.log("Cut", e)}
+      onCutCapture={e => console.log("CutCapture", e)}
+      onDoubleClick={e => console.log("DoubleClick", e)}
+      onDoubleClickCapture={e => console.log("DoubleClickCapture", e)}
+      onDrag={e => console.log("Drag", e)}
+      onDragCapture={e => console.log("DragCapture", e)}
+      onDragEnd={e => console.log("DragEnd", e)}
+      onDragEndCapture={e => console.log("DragEndCapture", e)}
+      onDragEnter={e => console.log("DragEnter", e)}
+      onDragEnterCapture={e => console.log("DragEnterCapture", e)}
+      onDragExit={e => console.log("DragExit", e)}
+      onDragExitCapture={e => console.log("DragExitCapture", e)}
+      onDragLeave={e => console.log("DragLeave", e)}
+      onDragLeaveCapture={e => console.log("DragLeaveCapture", e)}
+      onDragOver={e => console.log("DragOver", e)}
+      onDragOverCapture={e => console.log("DragOverCapture", e)}
+      onDragStart={e => console.log("DragStart", e)}
+      onDragStartCapture={e => console.log("DragStartCapture", e)}
+      onDrop={e => console.log("Drop", e)}
+      onDropCapture={e => console.log("DropCapture", e)}
+      onDurationChange={e => console.log("DurationChange", e)}
+      onDurationChangeCapture={e => console.log("DurationChangeCapture", e)}
+      onEmptied={e => console.log("Emptied", e)}
+      onEmptiedCapture={e => console.log("EmptiedCapture", e)}
+      onEncrypted={e => console.log("Encrypted", e)}
+      onEncryptedCapture={e => console.log("EncryptedCapture", e)}
+      onEnded={e => console.log("Ended", e)}
+      onEndedCapture={e => console.log("EndedCapture", e)}
+      onError={e => console.log("Error", e)}
+      onErrorCapture={e => console.log("ErrorCapture", e)}
+      onFocusCapture={e => console.log("FocusCapture", e)}
+      onGotPointerCapture={e => console.log("GotPointerCapture", e)}
+      onGotPointerCaptureCapture={e => console.log("GotPointerCaptureCapture", e)}
+      onInput={e => console.log("Input", e)}
+      onInputCapture={e => console.log("InputCapture", e)}
+      onInvalid={e => console.log("Invalid", e)}
+      onInvalidCapture={e => console.log("InvalidCapture", e)}
+      onKeyDown={e => console.log("KeyDown", e)}
+      onKeyDownCapture={e => console.log("KeyDownCapture", e)}
+      onKeyUp={e => console.log("KeyUp", e)}
+      onKeyUpCapture={e => console.log("KeyUpCapture", e)}
+      onLoad={e => console.log("Load", e)}
+      onLoadCapture={e => console.log("LoadCapture", e)}
+      onLoadStart={e => console.log("LoadStart", e)}
+      onLoadStartCapture={e => console.log("LoadStartCapture", e)}
+      onLoadedData={e => console.log("LoadedData", e)}
+      onLoadedDataCapture={e => console.log("LoadedDataCapture", e)}
+      onLoadedMetadata={e => console.log("LoadedMetadata", e)}
+      onLoadedMetadataCapture={e => console.log("LoadedMetadataCapture", e)}
+      onLostPointerCapture={e => console.log("LostPointerCapture", e)}
+      onLostPointerCaptureCapture={e => console.log("LostPointerCaptureCapture", e)}
+      onMouseDownCapture={e => console.log("MouseDownCapture", e)}
+      onMouseMoveCapture={e => console.log("MouseMoveCapture", e)}
+      onMouseOutCapture={e => console.log("MouseOutCapture", e)}
+      onMouseOverCapture={e => console.log("MouseOverCapture", e)}
+      onMouseUpCapture={e => console.log("MouseUpCapture", e)}
+      onPaste={e => console.log("Paste", e)}
+      onPasteCapture={e => console.log("PasteCapture", e)}
+      onPause={e => console.log("Pause", e)}
+      onPauseCapture={e => console.log("PauseCapture", e)}
+      onPlay={e => console.log("Play", e)}
+      onPlayCapture={e => console.log("PlayCapture", e)}
+      onPlaying={e => console.log("Playing", e)}
+      onPlayingCapture={e => console.log("PlayingCapture", e)}
+      onPointerCancel={e => console.log("PointerCancel", e)}
+      onPointerCancelCapture={e => console.log("PointerCancelCapture", e)}
+      onPointerDown={e => console.log("PointerDown", e)}
+      onPointerDownCapture={e => console.log("PointerDownCapture", e)}
+      onPointerEnter={e => console.log("PointerEnter", e)}
+      onPointerLeave={e => console.log("PointerLeave", e)}
+      onPointerMove={e => console.log("PointerMove", e)}
+      onPointerMoveCapture={e => console.log("PointerMoveCapture", e)}
+      onPointerOut={e => console.log("PointerOut", e)}
+      onPointerOutCapture={e => console.log("PointerOutCapture", e)}
+      onPointerOver={e => console.log("PointerOver", e)}
+      onPointerOverCapture={e => console.log("PointerOverCapture", e)}
+      onPointerUp={e => console.log("PointerUp", e)}
+      onPointerUpCapture={e => console.log("PointerUpCapture", e)}
+      onProgress={e => console.log("Progress", e)}
+      onProgressCapture={e => console.log("ProgressCapture", e)}
+      onRateChange={e => console.log("RateChange", e)}
+      onRateChangeCapture={e => console.log("RateChangeCapture", e)}
+      onReset={e => console.log("Reset", e)}
+      onResetCapture={e => console.log("ResetCapture", e)}
+      onScroll={e => console.log("Scroll", e)}
+      onScrollCapture={e => console.log("ScrollCapture", e)}
+      onScrollEnd={e => console.log("ScrollEnd", e)}
+      onScrollEndCapture={e => console.log("ScrollEndCapture", e)}
+      onSeeked={e => console.log("Seeked", e)}
+      onSeekedCapture={e => console.log("SeekedCapture", e)}
+      onSeeking={e => console.log("Seeking", e)}
+      onSeekingCapture={e => console.log("SeekingCapture", e)}
+      onSelect={e => console.log("Select", e)}
+      onSelectCapture={e => console.log("SelectCapture", e)}
+      onStalled={e => console.log("Stalled", e)}
+      onStalledCapture={e => console.log("StalledCapture", e)}
+      onSubmit={e => console.log("Submit", e)}
+      onSubmitCapture={e => console.log("SubmitCapture", e)}
+      onSuspend={e => console.log("Suspend", e)}
+      onSuspendCapture={e => console.log("SuspendCapture", e)}
+      onTimeUpdate={e => console.log("TimeUpdate", e)}
+      onTimeUpdateCapture={e => console.log("TimeUpdateCapture", e)}
+      onToggle={e => console.log("Toggle", e)}
+      onTouchCancel={e => console.log("TouchCancel", e)}
+      onTouchCancelCapture={e => console.log("TouchCancelCapture", e)}
+      onTouchEnd={e => console.log("TouchEnd", e)}
+      onTouchEndCapture={e => console.log("TouchEndCapture", e)}
+      onTouchMove={e => console.log("TouchMove", e)}
+      onTouchMoveCapture={e => console.log("TouchMoveCapture", e)}
+      onTouchStart={e => console.log("TouchStart", e)}
+      onTouchStartCapture={e => console.log("TouchStartCapture", e)}
+      onTransitionCancel={e => console.log("TransitionCancel", e)}
+      onTransitionCancelCapture={e => console.log("TransitionCancelCapture", e)}
+      onTransitionEnd={e => console.log("TransitionEnd", e)}
+      onTransitionEndCapture={e => console.log("TransitionEndCapture", e)}
+      onTransitionRun={e => console.log("TransitionRun", e)}
+      onTransitionRunCapture={e => console.log("TransitionRunCapture", e)}
+      onTransitionStart={e => console.log("TransitionStart", e)}
+      onTransitionStartCapture={e => console.log("TransitionStartCapture", e)}
+      onVolumeChange={e => console.log("VolumeChange", e)}
+      onVolumeChangeCapture={e => console.log("VolumeChangeCapture", e)}
+      onWaiting={e => console.log("Waiting", e)}
+      onWaitingCapture={e => console.log("WaitingCapture", e)}
+      onWheel={e => console.log("Wheel", e)}
+      onWheelCapture={e => console.log("WheelCapture", e)}
+      onKeyPress={e => console.log("KeyPress", e)}
+      onKeyPressCapture={e => console.log("KeyPressCapture", e)}
     >
       Plain
     </button>

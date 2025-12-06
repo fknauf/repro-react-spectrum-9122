@@ -26,3 +26,79 @@ PointerLeave pointerout { target: button, buttons: 0, clientX: 86, clientY: 21, 
 MouseOutCapture mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 1 page.tsx:8:13
 MouseOut mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3 page.tsx:8:13
 MouseLeave mouseout { target: button, buttons: 0, clientX: 86, clientY: 21, layerX: 0, layerY: 0 } 3
+Uncaught DOMException: Element.releasePointerCapture: Invalid pointer id
+    onPointerDown webpack-internal:///./node_modules/@react-aria/interactions/dist/usePress.mjs:320
+    React 8
+    sendEvent http://localhost:8080/__cypress/runner/cypress_runner.js:150529
+    sendPointerEvent http://localhost:8080/__cypress/runner/cypress_runner.js:149874
+    sendPointerdown http://localhost:8080/__cypress/runner/cypress_runner.js:149892
+    _downEvents http://localhost:8080/__cypress/runner/cypress_runner.js:150227
+    down http://localhost:8080/__cypress/runner/cypress_runner.js:150256
+    click http://localhost:8080/__cypress/runner/cypress_runner.js:150334
+    onReady http://localhost:8080/__cypress/runner/cypress_runner.js:114571
+    onReady http://localhost:8080/__cypress/runner/cypress_runner.js:114529
+    runAllChecks http://localhost:8080/__cypress/runner/cypress_runner.js:115207
+    retryActionability http://localhost:8080/__cypress/runner/cypress_runner.js:115229
+    tryCatcher http://localhost:8080/__cypress/runner/cypress_runner.js:1777
+    try http://localhost:8080/__cypress/runner/cypress_runner.js:4285
+    whenStable http://localhost:8080/__cypress/runner/cypress_runner.js:151493
+    retry http://localhost:8080/__cypress/runner/cypress_runner.js:151434
+    tryCatcher http://localhost:8080/__cypress/runner/cypress_runner.js:1777
+    _settlePromiseFromHandler http://localhost:8080/__cypress/runner/cypress_runner.js:1489
+    _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1546
+    _settlePromise0 http://localhost:8080/__cypress/runner/cypress_runner.js:1591
+    _settlePromises http://localhost:8080/__cypress/runner/cypress_runner.js:1671
+    _fulfill http://localhost:8080/__cypress/runner/cypress_runner.js:1615
+    handle http://localhost:8080/__cypress/runner/cypress_runner.js:5420
+    setTimeout handler*__webpack_modules__</module.exports/Promise.delay http://localhost:8080/__cypress/runner/cypress_runner.js:5420
+    retry http://localhost:8080/__cypress/runner/cypress_runner.js:151416
+    retryActionability http://localhost:8080/__cypress/runner/cypress_runner.js:115232
+    verify http://localhost:8080/__cypress/runner/cypress_runner.js:115235
+    tryCatcher http://localhost:8080/__cypress/runner/cypress_runner.js:1777
+    try http://localhost:8080/__cypress/runner/cypress_runner.js:4285
+    verify http://localhost:8080/__cypress/runner/cypress_runner.js:115129
+    perform http://localhost:8080/__cypress/runner/cypress_runner.js:114514
+    tryCatcher http://localhost:8080/__cypress/runner/cypress_runner.js:1777
+    gotValue http://localhost:8080/__cypress/runner/cypress_runner.js:6446
+    gotAccum http://localhost:8080/__cypress/runner/cypress_runner.js:6435
+    tryCatcher http://localhost:8080/__cypress/runner/cypress_runner.js:1777
+    _settlePromiseFromHandler http://localhost:8080/__cypress/runner/cypress_runner.js:1489
+    _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1546
+    _settlePromiseCtx http://localhost:8080/__cypress/runner/cypress_runner.js:1583
+    _drainQueueStep http://localhost:8080/__cypress/runner/cypress_runner.js:2381
+    _drainQueue http://localhost:8080/__cypress/runner/cypress_runner.js:2370
+    _drainQueues http://localhost:8080/__cypress/runner/cypress_runner.js:2386
+    drainQueues http://localhost:8080/__cypress/runner/cypress_runner.js:2256
+    promise callback*schedule http://localhost:8080/__cypress/runner/cypress_runner.js:2430
+    _queueTick http://localhost:8080/__cypress/runner/cypress_runner.js:2395
+    AsyncSettlePromises http://localhost:8080/__cypress/runner/cypress_runner.js:2327
+    _fulfill http://localhost:8080/__cypress/runner/cypress_runner.js:1617
+    _resolveCallback http://localhost:8080/__cypress/runner/cypress_runner.js:1409
+    _resolve http://localhost:8080/__cypress/runner/cypress_runner.js:6352
+    completed http://localhost:8080/__cypress/runner/cypress_runner.js:6413
+    _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1543
+    _settlePromise0 http://localhost:8080/__cypress/runner/cypress_runner.js:1591
+    _settlePromises http://localhost:8080/__cypress/runner/cypress_runner.js:1671
+    _fulfill http://localhost:8080/__cypress/runner/cypress_runner.js:1615
+    _resolveCallback http://localhost:8080/__cypress/runner/cypress_runner.js:1409
+    _settlePromiseFromHandler http://localhost:8080/__cypress/runner/cypress_runner.js:1501
+    _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1546
+    _settlePromise0 http://localhost:8080/__cypress/runner/cypress_runner.js:1591
+    _settlePromises http://localhost:8080/__cypress/runner/cypress_runner.js:1671
+    _fulfill http://localhost:8080/__cypress/runner/cypress_runner.js:1615
+    _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1559
+    _settlePromise0 http://localhost:8080/__cypress/runner/cypress_runner.js:1591
+    _settlePromises http://localhost:8080/__cypress/runner/cypress_runner.js:1671
+    _fulfill http://localhost:8080/__cypress/runner/cypress_runner.js:1615
+    _resolveCallback http://localhost:8080/__cypress/runner/cypress_runner.js:1409
+    _settlePromiseFromHandler http://localhost:8080/__cypress/runner/cypress_runner.js:1501
+    _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1546
+    _settlePromise0 http://localhost:8080/__cypress/runner/cypress_runner.js:1591
+    _settlePromises http://localhost:8080/__cypress/runner/cypress_runner.js:1671
+    _fulfill http://localhost:8080/__cypress/runner/cypress_runner.js:1615
+    _resolveCallback http://localhost:8080/__cypress/runner/cypress_runner.js:1409
+    _settlePromiseFromHandler http://localhost:8080/__cypress/runner/cypress_runner.js:1501
+    _settlePromise http://localhost:8080/__cypress/runner/cypress_runner.js:1546
+usePress.mjs:320:67
+BlurCapture focusout { target: button, isTrusted: true, relatedTarget: button.o7Xu8a_spectrum-ActionButton.o7Xu8a_spectrum-BaseButton.o7Xu8a_i18nFontFamily.o7Xu8a_spectrum-FocusRing.o7Xu8a_spectrum-FocusRing-ring, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, … } 1 page.tsx:8:13
+Blur focusout { target: button, isTrusted: true, relatedTarget: button.o7Xu8a_spectrum-ActionButton.o7Xu8a_spectrum-BaseButton.o7Xu8a_i18nFontFamily.o7Xu8a_spectrum-FocusRing.o7Xu8a_spectrum-FocusRing-ring, view: Window, detail: 0, layerX: 0, layerY: 0, which: 0, rangeOffset: 0, SCROLL_PAGE_UP: -32768, … } 3
